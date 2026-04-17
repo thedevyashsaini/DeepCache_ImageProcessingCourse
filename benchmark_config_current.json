@@ -1,0 +1,20 @@
+{
+  "experiment_name": "DeepCache Current Benchmark",
+  "model_id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "steps": 50,
+  "repeats": 1,
+  "warmup_steps": 5,
+  "prompts": [
+    "a photo of an astronaut on a moon",
+    "a beautiful castle beside a waterfall in spring, painting",
+    "a golden retriever playing in the snow, professional photo",
+    "a futuristic city skyline at sunset, digital art"
+  ],
+  "seeds": [42],
+  "cache_intervals": [2, 3, 4, 5],
+  "cache_branch_ids": [0, 1, 2, 3],
+  "default_compare": {
+    "cache_interval": 3,
+    "cache_branch_id": 0
+  }
+}
