@@ -9,6 +9,30 @@ This repository contains our Image Processing course project based on:
 - replication of **DeepCache: Accelerating Diffusion Models for Free** (CVPR 2024), and
 - our extension: **Adaptive DeepCache**, which replaces fixed cache refresh timing with a data-driven dynamic policy.
 
+## Results Preview
+
+### Fixed vs Adaptive Tradeoff
+
+![Fixed vs Adaptive](results/benchmarks/adaptive/plots/fixed_vs_adaptive.png)
+
+### Merged Speed-Quality Comparison
+
+![Merged Current vs Adaptive](results/benchmarks/adaptive/plots/merged_current_vs_adaptive.png)
+
+### Prompt-Wise Speedup Comparison
+
+![Prompt-wise Speedup Comparison](results/benchmarks/adaptive/plots/prompt_wise_speedup_compare.png)
+
+### Qualitative Sample (Castle Prompt)
+
+<p align="center">
+  <img src="results/benchmarks/adaptive/images/baseline_p2_s42_r1.png" alt="Castle baseline" width="30%" />
+  <img src="results/benchmarks/adaptive/images/fixed_p2_s42_r1.png" alt="Castle deepcache" width="30%" />
+  <img src="results/benchmarks/adaptive/images/adaptive_adaptive_speed_p2_s42_r1.png" alt="Castle adaptive speed" width="30%" />
+</p>
+
+From left to right: Baseline, DeepCache fixed, Adaptive-Speed.
+
 ## Team
 
 - Devyash Saini (202351030)
@@ -41,7 +65,7 @@ This creates a controllable speed-quality frontier instead of one static operati
 - `benchmark_config_current.json` - Config for fixed benchmark
 - `benchmark_config_adaptive.json` - Config for adaptive benchmark
 - `results/` - Raw outputs, tables, plots, and generated images
-- `report_ieee/` - Final IEEE-style report source, presentation source, and figure assets
+- `report_ieee/` - Final IEEE-style report source and presentation source
 
 ## Environment Setup
 
@@ -117,7 +141,7 @@ Default policy presets in this repo:
 - Fixed benchmark summary: `results/benchmarks/current/tables/config_summary.csv`
 - Adaptive benchmark summary: `results/benchmarks/adaptive/tables/adaptive_config_summary.csv`
 - Adaptive per-prompt metrics: `results/benchmarks/adaptive/tables/adaptive_per_prompt_metrics.csv`
-- Figures and artifacts for submission: `report_ieee/`
+- Figures used in README and analysis: `results/benchmarks/adaptive/plots/` and `results/benchmarks/adaptive/images/`
 
 ## Notes
 
